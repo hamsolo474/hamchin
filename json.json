@@ -1,0 +1,62 @@
+[
+    {   "section": "Settings",
+        "title": "repeats",
+        "desc": "",
+        "type": "numeric",
+        "key": "repeats"
+    },{
+        "section": "Settings",
+        "title": "Pinyin Numbers",
+        "desc": "on = ni3 hao3, off = nǐhǎo",
+        "type": "bool",
+        "key": "pinyin_choice"
+    },{
+        "section": "Settings",
+        "title": "Traditional Characters",
+        "desc": "on = Traditional Characters, off = Simplified Characters",
+        "type": "bool",
+        "key": "char_choice"
+    },{
+        "section": "Settings",
+        "title": "Character Font",
+        "desc": "",
+        "type": "string",
+        "key": "char_font"
+    },{
+        "section": "Settings",
+        "title": "Interface Font",
+        "desc": "",
+        "type": "string",
+        "key": "other_font"
+    },{
+        "section": "Colours",
+        "title": "Tone 1",
+        "desc": "",
+        "type": "string",
+        "key": "tone1c"
+    },{
+        "section": "Colours",
+        "title": "Tone 2",
+        "desc": "",
+        "type": "string",
+        "key": "tone2c"
+    },{
+        "section": "Colours",
+        "title": "Tone 3",
+        "desc": "",
+        "type": "string",
+        "key": "tone3c"
+    },{
+        "section": "Colours",
+        "title": "Tone 4",
+        "desc": "",
+        "type": "string",
+        "key": "tone4c"
+    },{
+        "section": "Colours",
+        "title": "Tone 5",
+        "desc": "",
+        "type": "string",
+        "key": "tone5c"
+    }
+]

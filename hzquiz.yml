@@ -1,0 +1,406 @@
+#:kivy 1.4
+
+<HanziQuiz>
+    back_button: back_button
+	game_banner: game_banner
+	percent_button: percent_button
+	main_text: main_text
+	b1_button: b1_button
+	b2_button: b2_button
+	b3_button: b3_button
+	b4_button: b4_button
+	bottom_text: bottom_text
+	tag_button: tag_button
+	sound_button: sound_button
+	meaning_button: meaning_button
+	next_button: next_button
+	#char_font: char_font
+	#main_font: main_font
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        Button:
+			text: '<'
+            font_size:0.3 * self.height
+            size_hint: .1, .1
+            id: back_button
+            on_release: root.manager.current = 'menu'
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "top"
+		Label:
+			id: game_banner
+			text: "Game name"
+			size_hint: .1, .1
+	AnchorLayout:
+		anchor_x: "right"
+		anchor_y: "top"
+		Button:
+			id: percent_button
+			text: "%"
+			font_size:0.3 * self.height
+			size_hint: .1, .1
+		BoxLayout:
+			orientation: 'vertical'
+			padding: 5
+			spacing: 10
+			Label:
+				markup: True
+				id: main_text
+				#font_name: 'RenDong Yang Bamboo stone.ttf'
+				font_size:0.6 * self.height
+				#font_size:self.width
+			GridLayout:
+				cols: 2
+				size_hint_y: .6
+				Button:
+					id: b1_button
+					font_size:0.3 * self.height
+					#font_size:self.width
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b2_button
+					font_size:0.3 * self.height
+					#font_size:self.width
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b3_button
+					font_size:0.3 * self.height
+					#font_size:self.width
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b4_button
+					font_size:0.3 * self.height
+					#font_size:self.width
+					on_release: root.check_answer(self.text)
+
+			Label:
+				id: bottom_text
+				text: " "
+				size_hint_y: 0.2
+			GridLayout:
+				cols: 6
+				size_hint_y: 0.3
+				Button:
+					id: tag_button
+					text: 'tag'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: sound_button
+					text: 'sound'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: meaning_button
+					text: 'meaning'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+                    on_release: root.show_meaning()
+				Button:
+					id: next_button
+					text: 'next'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+					on_release: root.next_function()
+
+<PinyinQuiz>
+    back_button: back_button
+	game_banner: game_banner
+	percent_button: percent_button
+	main_text: main_text
+	b1_button: b1_button
+	b2_button: b2_button
+	b3_button: b3_button
+	b4_button: b4_button
+	bottom_text: bottom_text
+	tag_button: tag_button
+	sound_button: sound_button
+	meaning_button: meaning_button
+	next_button: next_button
+	#char_font: char_font
+	#main_font: main_font
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        Button:
+			text: '<'
+            font_size:0.3 * self.height
+            size_hint: .1, .1
+            id: back_button
+            on_release: root.manager.current = 'menu'
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "top"
+		Label:
+			id: game_banner
+			text: "Game name"
+			size_hint: .1, .1
+	AnchorLayout:
+		anchor_x: "right"
+		anchor_y: "top"
+		Button:
+			id: percent_button
+			text: "%"
+			font_size:0.3 * self.height
+			size_hint: .1, .1
+		BoxLayout:
+			orientation: 'vertical'
+			padding: 5
+			spacing: 10
+			Label:
+				markup: True
+				id: main_text
+				font_size:0.6 * self.height
+			GridLayout:
+				cols: 2
+				size_hint_y: .6
+				Button:
+					id: b1_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b2_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b3_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b4_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+
+			Label:
+				id: bottom_text
+				text: " "
+				size_hint_y: 0.2
+			GridLayout:
+				cols: 6
+				size_hint_y: 0.3
+				Button:
+					id: tag_button
+					text: 'tag'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: sound_button
+					text: 'sound'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: meaning_button
+					text: 'meaning'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+                    on_release: root.show_meaning()
+				Button:
+					id: next_button
+					text: 'next'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+					on_release: root.next_function()
+
+<MeaningQuiz>
+    back_button: back_button
+	game_banner: game_banner
+	percent_button: percent_button
+	main_text: main_text
+	b1_button: b1_button
+	b2_button: b2_button
+	b3_button: b3_button
+	b4_button: b4_button
+	bottom_text: bottom_text
+	tag_button: tag_button
+	sound_button: sound_button
+	meaning_button: meaning_button
+	next_button: next_button
+	#char_font: char_font
+	#main_font: main_font
+    AnchorLayout:
+        anchor_x: "left"
+        anchor_y: "top"
+        Button:
+			text: '<'
+            font_size:0.3 * self.height
+            size_hint: .1, .1
+            id: back_button
+            on_release: root.manager.current = 'menu'
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "top"
+		Label:
+			id: game_banner
+			text: "Game name"
+			size_hint: .1, .1
+	AnchorLayout:
+		anchor_x: "right"
+		anchor_y: "top"
+		Button:
+			id: percent_button
+			text: "%"
+			font_size:0.3 * self.height
+			size_hint: .1, .1
+		BoxLayout:
+			orientation: 'vertical'
+			padding: 5
+			spacing: 10
+			Label:
+				markup: True
+				id: main_text
+				font_size:'30sp'
+			GridLayout:
+				cols: 2
+				size_hint_y: .6
+				Button:
+					id: b1_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b2_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b3_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+				Button:
+					id: b4_button
+					font_size:0.3 * self.height
+                    font_name:'MaShanZheng-Regular.ttf'
+					on_release: root.check_answer(self.text)
+
+			Label:
+				id: bottom_text
+				text: " "
+				size_hint_y: 0.2
+				font_size:0.3 * self.height
+
+			GridLayout:
+				cols: 6
+				size_hint_y: 0.3
+				Button:
+					id: tag_button
+					text: 'tag'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: sound_button
+					text: 'sound'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+				Button:
+					id: meaning_button
+					text: 'pinyin'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+                    on_release: root.show_pinyin()
+				Button:
+					id: next_button
+					text: 'next'
+					font_size:1.4 * self.width/6
+					padding: 10, 10
+					halign: 'left'
+					valign: 'middle'
+					on_release: root.next_function()
+
+<LoadList>:
+    AnchorLayout:
+		anchor_x: "left"
+		anchor_y: "top"
+		Button:
+			text: '<'
+			font_size:0.8 * self.height
+			size_hint: .1, .1
+			id: back_button
+			on_release: root.manager.current = 'menu'
+		AnchorLayout:
+			anchor_x: "center"
+			anchor_y: "top"
+			Label:
+				id: game_banner
+				text: "Game name"
+				size_hint: .1, .1
+			BoxLayout:
+				size: root.size
+				pos: root.pos
+				orientation: "vertical"
+				Label:
+					size_hint_y: 0.1
+				FileChooserListView:
+					id: filechooser
+					size_hint_y: 1
+					BoxLayout:
+						size_hint_y: None
+						height: 30
+						Button:
+							text: "Cancel"
+							on_release: root.cancel()
+						Button:
+							text: "Load"
+			                on_release: root.load(filechooser.selection)
+
+<Menu>
+	GridLayout:
+		cols: 1
+		Label:
+			id: game_banner
+			text: "Game name"
+			size_hint: .1, .1
+		StackLayout:
+			orientation: 'lr-tb'
+			padding: 20
+			spacing: 20
+			Button:
+				text: "hanzi"
+				size_hint: .3,.2
+                on_release: root.manager.current = 'hanziquiz'
+			Button:
+				text: "pinyin"
+				size_hint: .3, .2
+                on_release: root.manager.current = 'pinyinquiz'
+			Button:
+				text: "meaning"
+				size_hint: .3, .2
+                on_release: root.manager.current = 'meaningquiz'
+			Button:
+				text: "load list"
+				size_hint: .3, .2
+				on_release: root.manager.current = 'loadlist'
+			Button:
+				text: "view list"
+				size_hint: .3, .2
+			Button:
+				text: "settings"
+				size_hint: .3, .2
+                on_release: app.open_settings()

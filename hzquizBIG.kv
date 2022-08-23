@@ -1,0 +1,106 @@
+#:kivy 1.4
+
+<RootWidget>
+	back: back
+	#b1: b1
+	#b2: b2
+	#b3: b3
+	#b4: b4
+	#tag: tag
+	#next: next
+	#sound: sound
+	#bottom: bottom
+	#meaning: meaning
+	#percent: percent
+	#maintext: maintext
+	#game_name: game_name
+	AnchorLayout:
+		anchor_x: "left"
+		anchor_y: "top"
+		Button:
+			text: "<"
+			font_size:0.8 * self.height
+			size_hint: .1, .1
+			on_release: root.back()
+			id: back
+	AnchorLayout:
+		anchor_x: "center"
+		anchor_y: "top"
+		Label:
+			#id: game_name
+			text: "Game name"
+			size_hint: .1, .1
+	AnchorLayout:
+		anchor_x: "right"
+		anchor_y: "top"
+		Button:
+			#id: percent
+			text: "%"
+			font_size:0.8 * self.height
+			size_hint: .1, .1
+
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 5
+		spacing: 10
+		Label:
+			text: "[color=0000aa]开[/color][color=ff7700]始[/color][color=0000aa]车[/color]"
+			markup: True
+			#id: maintext
+			font_name:'MaShanZheng-Regular.ttf'
+			font_size:0.8 * self.height
+		GridLayout:
+			cols: 2
+			size_hint_y: .6
+			Button:
+				id: b1
+				text: 'ren'
+				font_size:0.8 * self.height
+			Button:
+				#id: b2
+				text: 'ling'
+				font_size:0.8 * self.height
+			Button:
+				#id: b3
+				text: 'ru'
+				font_size:0.8 * self.height
+			Button:
+				#id: b4
+				text: 'hei'
+				font_size:0.8 * self.height
+
+		Label:
+			#id: bottom
+			text: " "
+			size_hint_y: 0.2
+		GridLayout:
+			cols: 6
+			size_hint_y: 0.3
+			Button:
+				#id: tag
+				text: 'tag'
+				font_size:1.4 * self.width/6
+				padding: 10, 10
+				halign: 'left'
+				valign: 'middle'
+			Button:
+				#id: sound
+				text: 'sound'
+				font_size:1.4 * self.width/6
+				padding: 10, 10
+				halign: 'left'
+				valign: 'middle'
+			Button:
+				#id: meaning
+				text: 'meaning'
+				font_size:1.4 * self.width/6
+				padding: 10, 10
+				halign: 'left'
+				valign: 'middle'
+			Button:
+				#id: next
+				text: 'next'
+				font_size:1.4 * self.width/6
+				padding: 10, 10
+				halign: 'left'
+				valign: 'middle'
